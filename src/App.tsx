@@ -1,4 +1,5 @@
 import "./App.css";
+import imagem from "./assets/demonstracao.png"
 
 function App() {
    return (
@@ -49,8 +50,8 @@ function App() {
                      simples, organizada e integrada.
                   </p>
                   <div className="hero-buttons">
-                     <button className="btn-primary">Testar Agora</button>
-                     <button className="btn-secondary">
+                     {/* <button className="btn-primary">Testar Agora</button> */}
+                     <button className="btn-primary" onClick={() => window.location.href = 'https://wa.me/5535984295765'}>
                         Entrar em Contato
                      </button>
                   </div>
@@ -90,7 +91,7 @@ function App() {
          <section id="beneficios" className="benefits">
             <div className="container">
                <div className="section-header">
-                  <h2>Por que escolher o AgendaPro?</h2>
+                  <h2>Por que escolher o ShearsHub?</h2>
                   <p>Soluções completas para otimizar seu negócio</p>
                </div>
                <div className="benefits-grid">
@@ -251,7 +252,8 @@ function App() {
                </div>
                <div className="demo-content">
                   <div className="demo-showcase">
-                     <img src="https://mockuuups.studio/cdn-cgi/image/format=auto/web-cdn/images/header-iphone-mockups-2.png" />
+                     {/* <img src="https://mockuuups.studio/cdn-cgi/image/format=auto/web-cdn/images/header-iphone-mockups-2.png" /> */}
+                     <img src={imagem} />
                   </div>
                </div>
             </div>
@@ -269,7 +271,7 @@ function App() {
                      <div className="testimonial-content">
                         <div className="stars">★★★★★</div>
                         <p>
-                           "O AgendaPro revolucionou minha barbearia. Reduzi as
+                           "O ShearsHub revolucionou minha barbearia. Reduzi as
                            faltas em 80% e aumentei minha receita em 40% no
                            primeiro mês!"
                         </p>
@@ -336,7 +338,7 @@ function App() {
          </section>
 
          {/* <!-- Chamada para Ação --> */}
-         <section className="cta">
+         {/* <section className="cta">
             <div className="container">
                <div className="cta-content">
                   <h2>Pronto para Transformar seu Negócio?</h2>
@@ -372,6 +374,36 @@ function App() {
                <div className="gradient-orb orb-1"></div>
                <div className="gradient-orb orb-2"></div>
             </div>
+         </section> */}
+         {/* <!-- Chamada para Ação --> */}
+         <section className="cta">
+            <div className="container">
+               <div className="cta-content">
+                  <h2>Pronto para dar o próximo passo no seu negócio?</h2>
+                  <p>
+                     O ShearsHub foi desenvolvido com carinho e atenção às reais
+                     necessidades de salões, barbearias e clínicas de estética.
+                  </p>
+
+                  <p>
+                     Comece agora gratuitamente e descubra como a tecnologia pode
+                     facilitar sua rotina.
+                  </p>
+
+                  <div className="cta-buttons">
+                     {/* <button className="btn-primary large">
+                        Testar Gratuitamente
+                     </button> */}
+                     <button className="btn-primary large" onClick={() => window.location.href = 'https://wa.me/5535984295765'}>
+                        Falar com Especialista
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div className="cta-background">
+               <div className="gradient-orb orb-1"></div>
+               <div className="gradient-orb orb-2"></div>
+            </div>
          </section>
 
          {/* <!-- Rodapé --> */}
@@ -379,7 +411,7 @@ function App() {
             <div className="container">
                <div className="footer-content">
                   <div className="footer-section">
-                     <h3>AgendaPro</h3>
+                     <h3>ShearsHub</h3>
                      <p>
                         A solução completa para gestão de agendamentos em
                         estabelecimentos de estética.
@@ -417,7 +449,7 @@ function App() {
                         </a>
                      </div>
                   </div>
-                  <div className="footer-section">
+                  {/* <div className="footer-section">
                      <h4>Produto</h4>
                      <ul>
                         <li>
@@ -450,18 +482,18 @@ function App() {
                            <a href="#">Status</a>
                         </li>
                      </ul>
-                  </div>
+                  </div> */}
                   <div className="footer-section">
                      <h4>Contato</h4>
                      <ul>
-                        <li>📧 contato@agendapro.com.br</li>
-                        <li>📱 (11) 99999-9999</li>
-                        <li>📍 São Paulo, SP</li>
+                        <li>📧 contatoshearshub@gmail.com</li>
+                        <li>📱 (35) 98429-5765</li>
+                        {/* <li>📍 São Paulo, SP</li> */}
                      </ul>
                   </div>
                </div>
                <div className="footer-bottom">
-                  <p>&copy; 2024 AgendaPro. Todos os direitos reservados.</p>
+                  <p>&copy; 2025 ShearsHub. Todos os direitos reservados.</p>
                   <div className="footer-links">
                      <a href="#">Política de Privacidade</a>
                      <a href="#">Termos de Uso</a>
