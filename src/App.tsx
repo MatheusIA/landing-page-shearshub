@@ -1,5 +1,5 @@
 import "./App.css";
-import imagem from "./assets/demonstracao_2.png"
+import imagem from "./assets/demonstracao.png"
 
 function App() {
    return (
@@ -259,7 +259,7 @@ function App() {
             </div>
          </section>
 
-         {/* Depoimentos */}
+         {/* Depoimentos
          <section id="depoimentos" className="testimonials">
             <div className="container">
                <div className="section-header">
@@ -335,7 +335,7 @@ function App() {
                   </div>
                </div>
             </div>
-         </section>
+         </section> */}
 
          {/* <!-- Chamada para Ação --> */}
          {/* <section className="cta">
