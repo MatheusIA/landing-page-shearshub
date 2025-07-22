@@ -684,6 +684,11 @@ body {
    .section-header h2 {
       font-size: 2rem;
    }
+
+   .demo-showcase img {
+   height: 270px;
+
+   }
 }
 @media (max-width: 480px) {
    .hero-title {
@@ -708,6 +713,19 @@ body {
       left: auto;
       right: auto;
       bottom: auto;
+   }
+
+   .demo-showcase img {
+   height: 150px;
+   
+   }
+}
+
+@media (max-width: 380px) {
+   
+   .demo-showcase img {
+   height: 250px;
+   
    }
 }
 /* Scroll animations */
