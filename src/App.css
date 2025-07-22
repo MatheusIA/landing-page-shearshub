@@ -372,11 +372,10 @@ body {
    padding: 8rem 0;
 }
 .testimonials-grid {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-   gap: 2rem;
-   width: 1280px;
-   margin: 0 auto;
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
 }
 .testimonial-card {
    background: rgba(255, 255, 255, 0.03);
@@ -649,8 +648,14 @@ body {
       grid-template-columns: 1fr;
    }
    .testimonials-grid {
-      grid-template-columns: 1fr;
-   }
+    flex-direction: column; /* força 1 embaixo do outro */
+    align-items: center; /* centraliza */
+  }
+   .testimonial-card {
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
    .cta-content h2 {
       font-size: 2rem;
    }
