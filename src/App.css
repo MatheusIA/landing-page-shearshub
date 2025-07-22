@@ -686,7 +686,7 @@ body {
    }
 
    .demo-showcase img {
-   height: 270px;
+   height: 348px;
 
    }
 }
@@ -716,13 +716,12 @@ body {
    }
 
    .demo-showcase img {
-   height: 150px;
+   height: 350px;
    
    }
 }
 
-@media (max-width: 380px) {
-   
+@media (max-width: 380px) {   
    .demo-showcase img {
    height: 250px;
    
