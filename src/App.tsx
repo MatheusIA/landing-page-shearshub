@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import imagem from "./assets/demonstracao.png"
+import logo from "./assets/logo.png";
+import imagem from "./assets/demonstracao_new.png"
 
 function App() {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,6 +16,7 @@ function App() {
          <nav className="navbar">
             <div className="nav-container">
                <div className="nav-logo">
+                  <img src={logo} alt="Marcae Logo" className="logo-img" />
                   <h2>Marcae</h2>
                </div>
                <ul className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
@@ -63,21 +65,21 @@ function App() {
                   </div>
                </div>
                <div className="hero-visual">
-                  <div className="floating-card card-1" style={{ top: '50px', left: '50px' }}>
+                  <div className="floating-card card-1">
                      <div className="card-icon">📅</div>
                      <div className="card-text">
                         <h4>Agendamento Online</h4>
                         <p>24/7 disponível</p>
                      </div>
                   </div>
-                  <div className="floating-card card-2" style={{ top: '200px', right: '30px' }}>
+                  <div className="floating-card card-2">
                      <div className="card-icon">💰</div>
                      <div className="card-text">
                         <h4>Controle Financeiro</h4>
                         <p>Receitas em tempo real</p>
                      </div>
                   </div>
-                  <div className="floating-card card-3" style={{ bottom: '100px', left: '20px' }}>
+                  <div className="floating-card card-3">
                      <div className="card-icon">👥</div>
                      <div className="card-text">
                         <h4>Gestão de Clientes</h4>
@@ -253,7 +255,7 @@ function App() {
                </div>
                <div className="demo-content">
                   <div className="demo-showcase">
-                     <img src={imagem} alt="Demonstração Marcae" />
+                     <img src={imagem} alt="Demonstração Marcae App Dashboard" />
                   </div>
                </div>
             </div>
@@ -323,9 +325,17 @@ function App() {
                   </div>
                   <div className="footer-section">
                      <h4>Contato</h4>
-                     <ul>
-                        <li>📧 marcaecontato@gmail.com.br</li>
-                        <li>📱 (35) 98429-5765</li>
+                     <ul className="contact-list">
+                        <li>
+                           <a href="mailto:marcaecontato@gmail.com">
+                              <span>📧</span> marcaecontato@gmail.com
+                           </a>
+                        </li>
+                        <li>
+                           <a href="https://wa.me/5535984295765" target="_blank" rel="noopener noreferrer">
+                              <span>📱</span> (35) 98429-5765
+                           </a>
+                        </li>
                      </ul>
                   </div>
                </div>

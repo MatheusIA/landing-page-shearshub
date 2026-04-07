@@ -59,10 +59,22 @@ body {
    height: 80px;
 }
 
+.nav-logo {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+}
+
+.logo-img {
+   height: 32px;
+   width: auto;
+   object-fit: contain;
+}
+
 .nav-logo h2 {
    color: var(--white);
    font-size: 1.5rem;
-   font-weight: 800;
+   font-weight: 700;
    letter-spacing: -0.5px;
 }
 
@@ -88,7 +100,7 @@ body {
 .nav-cta {
    background: var(--white);
    padding: 10px 24px;
-   border-radius: var(--radius);
+   border-radius: 50px;
    color: var(--primary) !important;
    font-weight: 600;
 }
@@ -117,9 +129,7 @@ body {
    min-height: 90vh;
    display: flex;
    align-items: center;
-   position: relative;
-   overflow: hidden;
-   padding-top: 80px;
+   padding: 120px 0 80px;
    background-color: var(--primary);
    color: var(--white);
 }
@@ -127,11 +137,11 @@ body {
 .hero-container {
    max-width: 1200px;
    margin: 0 auto;
-   padding: 0 20px;
+   padding: 0 2rem;
    display: grid;
-   grid-template-columns: 1fr 1fr;
-   gap: 4rem;
+   grid-template-columns: 1.2fr 0.8fr;
    align-items: center;
+   gap: 4rem;
    z-index: 2;
    position: relative;
 }
@@ -155,24 +165,25 @@ body {
 .hero-subtitle {
    font-size: 1.25rem;
    color: rgba(255, 255, 255, 0.7);
-   margin-bottom: 3rem;
+   margin-bottom: 2.5rem;
+   max-width: 540px;
    line-height: 1.6;
 }
 
 .hero-buttons {
    display: flex;
    gap: 1.5rem;
-   flex-wrap: wrap;
 }
 
 .btn-primary,
 .btn-secondary {
    padding: 16px 32px;
-   border-radius: var(--radius);
+   border-radius: 12px;
    font-weight: 700;
    font-size: 1rem;
    cursor: pointer;
    transition: all 0.3s ease;
+   text-decoration: none;
    border: none;
    position: relative;
 }
@@ -209,22 +220,41 @@ body {
 .floating-card {
    position: absolute;
    background: rgba(255, 255, 255, 0.1);
-   backdrop-filter: blur(10px);
+   backdrop-filter: blur(12px);
    border: 1px solid rgba(255, 255, 255, 0.1);
-   border-radius: 20px;
    padding: 1.25rem;
+   border-radius: 20px;
    display: flex;
    align-items: center;
    gap: 1rem;
+   width: 280px;
    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
    animation: float 6s ease-in-out infinite;
+}
+
+.card-1 {
+   top: 10%;
+   left: 20%;
+   animation-delay: 0s;
+}
+
+.card-2 {
+   top: 35%;
+   left: 45%;
+   animation-delay: 2s;
+}
+
+.card-3 {
+   top: 60%;
+   left: 15%;
+   animation-delay: 4s;
 }
 
 .card-icon {
    font-size: 1.5rem;
    width: 50px;
    height: 50px;
-   background: var(--primary);
+   background: var(--white);
    border-radius: 12px;
    display: flex;
    align-items: center;
@@ -235,7 +265,7 @@ body {
 .card-text h4 {
    font-size: 0.95rem;
    font-weight: 700;
-   margin-bottom: 0.1rem;
+   margin-bottom: 2px;
    color: var(--white);
 }
 
@@ -265,7 +295,7 @@ body {
 .orb-1 {
    width: 400px;
    height: 400px;
-   background: linear-gradient(135deg, #702bcd, #a855f7);
+   background: var(--success);
    top: 10%;
    left: -10%;
    animation-delay: 0s;
@@ -274,8 +304,8 @@ body {
 .orb-2 {
    width: 300px;
    height: 300px;
-   background: linear-gradient(135deg, #a855f7, #ec4899);
-   top: 60%;
+   background: var(--primary-light);
+   top: 50%;
    right: -10%;
    animation-delay: 2s;
 }
@@ -283,8 +313,8 @@ body {
 .orb-3 {
    width: 200px;
    height: 200px;
-   background: linear-gradient(135deg, #3b82f6, #702bcd);
-   bottom: 20%;
+   background: var(--white);
+   bottom: 10%;
    left: 50%;
    animation-delay: 1s;
 }
@@ -299,7 +329,7 @@ body {
 .section-header h2 {
    font-size: 2.75rem;
    font-weight: 800;
-   margin-bottom: 1.25rem;
+   margin-bottom: 1rem;
    color: var(--primary);
    letter-spacing: -0.5px;
 }
@@ -312,7 +342,6 @@ body {
 /* Benefits Section */
 .benefits {
    padding: 8rem 0;
-   position: relative;
    background-color: var(--white);
 }
 
@@ -327,8 +356,8 @@ body {
 .benefit-card {
    background: var(--card);
    border: 1px solid var(--border);
-   border-radius: var(--radius);
-   padding: 2.5rem;
+   padding: 3rem;
+   border-radius: 24px;
    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
    animation: fadeInUp 0.8s ease both;
 }
@@ -343,12 +372,18 @@ body {
 .benefit-icon {
    width: 64px;
    height: 64px;
-   background: var(--primary);
+   background: var(--primary-light);
+   color: var(--primary);
    border-radius: 16px;
    display: flex;
    align-items: center;
    justify-content: center;
    margin-bottom: 2rem;
+   transition: all 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+   background: var(--primary);
    color: var(--white);
    box-shadow: 0 8px 16px rgba(1, 24, 24, 0.2);
 }
@@ -363,50 +398,51 @@ body {
 .benefit-card p {
    color: var(--text-muted);
    line-height: 1.7;
-   font-size: 1rem;
 }
 
 /* Demo Section */
 .demo {
    padding: 8rem 0;
-   background: var(--background);
 }
 
 .demo-content {
    max-width: 1000px;
    margin: 0 auto;
+   padding: 0 2rem;
 }
 
 .demo-showcase {
    position: relative;
    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
-   border-radius: 32px;
+   border-radius: 40px;
    overflow: hidden;
-   height: 600px;
    background: var(--white);
    border: 8px solid var(--primary);
+   height: 600px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 2rem;
 }
 
 .demo-showcase img {
-   height: 90%;
-   position: absolute;
-   left: 50%;
-   transform: translateX(-50%) translateY(-50%);
-   top: 55%;
+   height: 100%;
+   width: auto;
    object-fit: contain;
+   border-radius: 20px;
+   transition: transform 0.3s ease;
 }
 
 /* Testimonials Section */
 .testimonials {
    padding: 8rem 0;
-   background: var(--white);
 }
 
 .testimonial-card {
    background: var(--card);
    border: 1px solid var(--border);
-   border-radius: var(--radius);
    padding: 2.5rem;
+   border-radius: 24px;
    transition: all 0.3s ease;
    max-width: 400px;
 }
@@ -425,7 +461,7 @@ body {
 .testimonial-content p {
    color: var(--text-muted);
    font-style: italic;
-   line-height: 1.7;
+   line-height: 1.6;
    margin-bottom: 2rem;
    font-size: 1.05rem;
 }
@@ -438,8 +474,6 @@ body {
 /* CTA Section */
 .cta {
    padding: 10rem 0;
-   position: relative;
-   text-align: center;
    background-color: var(--primary);
    color: var(--white);
    overflow: hidden;
@@ -448,6 +482,7 @@ body {
 .cta-content {
    position: relative;
    z-index: 2;
+   text-align: center;
    max-width: 800px;
    margin: 0 auto;
 }
@@ -456,6 +491,7 @@ body {
    font-size: 3.5rem;
    font-weight: 800;
    margin-bottom: 1.5rem;
+   line-height: 1.1;
    letter-spacing: -1px;
 }
 
@@ -475,7 +511,6 @@ body {
 .stat h3 {
    font-size: 3rem;
    font-weight: 800;
-   color: var(--success);
    margin-bottom: 0.5rem;
 }
 
@@ -490,7 +525,6 @@ body {
 /* Footer */
 .footer {
    background: #011010;
-   /* Darker version of primary */
    padding: 6rem 0 3rem;
    border-top: 1px solid rgba(255, 255, 255, 0.05);
    color: var(--white);
@@ -506,14 +540,14 @@ body {
 .footer-section h3,
 .footer-section h4 {
    margin-bottom: 1.5rem;
-   color: var(--white);
+   font-size: 1.25rem;
    font-weight: 700;
 }
 
 .footer-section p,
 .footer-section li {
    color: rgba(255, 255, 255, 0.6);
-   font-size: 0.95rem;
+   font-size: 1rem;
    line-height: 1.6;
 }
 
@@ -521,22 +555,61 @@ body {
    color: var(--white);
 }
 
+.social-links {
+   display: flex;
+   gap: 1.5rem;
+   margin-top: 2rem;
+}
+
 .social-links a {
    width: 44px;
    height: 44px;
    background: rgba(255, 255, 255, 0.05);
+   display: flex;
+   align-items: center;
+   justify-content: center;
    border-radius: 12px;
    color: var(--white);
+   transition: all 0.3s ease;
 }
 
 .social-links a:hover {
    background: var(--white);
    color: var(--primary);
+   transform: translateY(-3px);
+}
+
+.contact-list {
+   list-style: none;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.contact-list li a {
+   color: rgba(255, 255, 255, 0.6);
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   transition: color 0.3s ease;
+}
+
+.contact-list li a span {
+   font-size: 1.2rem;
+}
+
+.contact-list li a:hover {
+   color: var(--white);
 }
 
 .footer-bottom {
    padding-top: 2rem;
    border-top: 1px solid rgba(255, 255, 255, 0.05);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
    color: rgba(255, 255, 255, 0.4);
    font-size: 0.9rem;
 }
@@ -635,11 +708,28 @@ body {
    }
 
    .hero-visual {
-      height: 350px;
+      height: 400px;
+      margin-top: 2rem;
    }
 
    .floating-card {
-      padding: 1rem;
+      width: 240px;
+      padding: 0.75rem;
+   }
+
+   .card-1 {
+      top: 5%;
+      left: 10%;
+   }
+
+   .card-2 {
+      top: 35%;
+      left: 30%;
+   }
+
+   .card-3 {
+      top: 65%;
+      left: 5%;
    }
 
    .cta-content h2 {
