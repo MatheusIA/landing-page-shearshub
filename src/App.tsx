@@ -22,7 +22,8 @@ import {
 import "./App.css";
 import "./feature-cards.css";
 import logo from "./assets/logo.png";
-import dashboardImage from "./assets/demonstracao_new.png";
+import notebookImage from "./assets/notebook.png";
+import phoneImage from "./assets/phone.png";
 import scheduleImage from "./assets/demonstracao.png";
 import financeImage from "./assets/demonstracao_2.png";
 
@@ -59,11 +60,11 @@ const features = [
 ];
 const businesses = ["Barbearias", "Salões de beleza", "Clínicas de estética", "Consultórios", "Estúdios", "Profissionais autônomos"];
 const businessDescriptions: Record<string, string> = {
-   "Barbearias": "Organize horários, barbeiros, serviços e o movimento financeiro do dia.",
+   Barbearias: "Organize horários, barbeiros, serviços e o movimento financeiro do dia.",
    "Salões de beleza": "Centralize a agenda da equipe e acompanhe todos os atendimentos do salão.",
    "Clínicas de estética": "Gerencie procedimentos, profissionais e informações importantes dos clientes.",
-   "Consultórios": "Mantenha compromissos e cadastros organizados em uma rotina mais eficiente.",
-   "Estúdios": "Controle reservas, serviços e disponibilidade com clareza e praticidade.",
+   Consultórios: "Mantenha compromissos e cadastros organizados em uma rotina mais eficiente.",
+   Estúdios: "Controle reservas, serviços e disponibilidade com clareza e praticidade.",
    "Profissionais autônomos": "Cuide da agenda, dos clientes e das finanças mesmo trabalhando sozinho.",
 };
 
@@ -140,10 +141,9 @@ function App() {
                         </p>
                      </div>
                   </div>
-                  <div className="hero-product" aria-label="Prévia do aplicativo Marcae Admin">
-                     <div className="product-frame">
-                        <img src={dashboardImage} alt="Tela inicial do Marcae Admin" />
-                     </div>
+                  <div className="hero-product device-showcase" aria-label="Marcae Admin no notebook e no celular">
+                     <img className="hero-notebook" src={notebookImage} alt="Marcae Admin exibido em um notebook" />
+                     <img className="hero-phone" src={phoneImage} alt="Marcae Admin exibido em um celular" />
                      <div className="mini-card mini-card-top">
                         <span className="mini-icon">
                            <Check />
@@ -322,10 +322,9 @@ function App() {
             <div className="container">
                <div className="footer-main">
                   <div>
-                     <a className="brand" href="#inicio">
-                        <img src={logo} alt="" />
-                        <span>marcae</span>
-                     </a>
+                        <a className="brand footer-brand" href="#inicio" aria-label="Marcae Admin - início">
+                           <img src={logo} alt="Marcae Admin" />
+                        </a>
                      <p>Gestão simples para quem faz acontecer.</p>
                   </div>
                   <div className="footer-links">
