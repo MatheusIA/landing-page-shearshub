@@ -113,7 +113,7 @@ function App() {
                      <h1>
                         Mais tempo para seus clientes. <span>Menos tempo com a gestão.</span>
                      </h1>
-                     <p>Agendamentos, clientes, equipe e finanças reunidos em uma plataforma feita para quem presta serviços.</p>
+                     <p>Agendamentos online, clientes, equipe e finanças reunidos em uma plataforma feita para quem presta serviços.</p>
                      <div className="hero-actions">
                         <a className="button button-light" href="#download">
                            Baixar o Marcae <Download size={19} />
