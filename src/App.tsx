@@ -58,6 +58,14 @@ const features = [
    },
 ];
 const businesses = ["Barbearias", "Salões de beleza", "Clínicas de estética", "Consultórios", "Estúdios", "Profissionais autônomos"];
+const businessDescriptions: Record<string, string> = {
+   "Barbearias": "Organize horários, barbeiros, serviços e o movimento financeiro do dia.",
+   "Salões de beleza": "Centralize a agenda da equipe e acompanhe todos os atendimentos do salão.",
+   "Clínicas de estética": "Gerencie procedimentos, profissionais e informações importantes dos clientes.",
+   "Consultórios": "Mantenha compromissos e cadastros organizados em uma rotina mais eficiente.",
+   "Estúdios": "Controle reservas, serviços e disponibilidade com clareza e praticidade.",
+   "Profissionais autônomos": "Cuide da agenda, dos clientes e das finanças mesmo trabalhando sozinho.",
+};
 
 function App() {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -212,9 +220,12 @@ function App() {
                   </div>
                   <div className="audience-list">
                      {businesses.map((item, index) => (
-                        <div className="audience-item" key={item}>
+                        <div className="audience-item" key={item} tabIndex={0}>
                            <span>{String(index + 1).padStart(2, "0")}</span>
-                           <strong>{item}</strong>
+                           <div className="audience-item-content">
+                              <strong>{item}</strong>
+                              <p>{businessDescriptions[item]}</p>
+                           </div>
                            <ChevronRight />
                         </div>
                      ))}
