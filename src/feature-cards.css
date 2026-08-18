@@ -1,0 +1,33 @@
+.feature-grid {
+  gap: 22px;
+  border: 0;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.44);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.feature-card:hover {
+  border-color: rgba(76, 175, 130, 0.4);
+}
+
+@media (max-width: 680px) {
+  .feature-grid {
+    gap: 16px;
+  }
+}
+
+.nav-brand img {
+  width: 84px;
+  height: auto;
+  max-height: 52px;
+  object-fit: contain;
+}
+
+@media (max-width: 680px) {
+  .nav-brand img {
+    width: 74px;
+  }
+}
