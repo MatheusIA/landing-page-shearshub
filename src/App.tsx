@@ -29,8 +29,8 @@ import financeImage from "./assets/demonstracao_2.png";
 import PrivacyPolicy from "./PrivacyPolicy";
 
 const whatsappUrl = "https://wa.me/5535984295765";
-const windowsDownloadUrl =
-   "https://github.com/guhdsrosa/marcae-desktop-releases/releases/download/v1.0.3/Marcae-Administrador-Setup-1.0.3.exe";
+// const windowsDownloadUrl =
+//    "https://github.com/guhdsrosa/marcae-desktop-releases/releases/download/v1.0.3/Marcae-Administrador-Setup-1.0.3.exe";
 const features = [
    {
       icon: CalendarDays,
@@ -320,15 +320,25 @@ function App() {
                         </span>
                         <span className="soon">Em breve</span>
                      </div>
-                     <div className="platform-card disabled">
+                     <a className="platform-card available" href="https://apps.apple.com/br/app/marcae-admin/id6796893790" target="_blank">
                         <span className="platform-icon apple-icon">●</span>
                         <span>
-                           <small>EM BREVE NA</small>
+                           <small>DISPONÍVEL NA</small>
                            <strong>App Store</strong>
                         </span>
+                        <Download className="platform-action" />
+                     </a>
+                     <a className="platform-card disabled">
+                        <span className="platform-icon">
+                           <Monitor />
+                        </span>
+                        <span>
+                           <small>EM BREVE NO</small>
+                           <strong>Windows</strong>
+                        </span>
                         <span className="soon">Em breve</span>
-                     </div>
-                     <a className="platform-card available" href={windowsDownloadUrl}>
+                     </a>
+                     {/* <a className="platform-card available" href={windowsDownloadUrl}>
                         <span className="platform-icon">
                            <Monitor />
                         </span>
@@ -337,7 +347,7 @@ function App() {
                            <strong>Windows</strong>
                         </span>
                         <Download className="platform-action" />
-                     </a>
+                     </a> */}
                   </div>
                </div>
             </section>
