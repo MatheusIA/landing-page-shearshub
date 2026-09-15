@@ -26,6 +26,7 @@ import notebookImage from "./assets/notebook.png";
 import phoneImage from "./assets/phone.png";
 import scheduleImage from "./assets/demonstracao.png";
 import financeImage from "./assets/demonstracao_2.png";
+import PrivacyPolicy from "./PrivacyPolicy";
 
 const whatsappUrl = "https://wa.me/5535984295765";
 const windowsDownloadUrl =
@@ -70,6 +71,11 @@ const businessDescriptions: Record<string, string> = {
 
 function App() {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+   if (window.location.pathname.replace(/\/+$/, "") === "/politica-de-privacidade") {
+      return <PrivacyPolicy />;
+   }
+
    const closeMenu = () => setIsMenuOpen(false);
    return (
       <div className="site-shell">
@@ -333,6 +339,7 @@ function App() {
                         <a href="#recursos">Recursos</a>
                         <a href="#para-quem">Para quem é</a>
                         <a href="#download">Download</a>
+                        <a href="/politica-de-privacidade">Política de Privacidade</a>
                      </div>
                      <div>
                         <strong>Contato</strong>
