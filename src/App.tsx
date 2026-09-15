@@ -117,9 +117,13 @@ function App() {
                         <Sparkles size={15} /> Gestão simples. Negócio organizado.
                      </div>
                      <h1>
-                        Mais tempo para seus clientes. <span>Menos tempo com a gestão.</span>
+                        Organize seus agendamentos. <span>Simplifique a gestão do seu negócio.</span>
                      </h1>
-                     <p>Agendamentos online, clientes, equipe e finanças reunidos em uma plataforma feita para quem presta serviços.</p>
+                     <p>
+                        O Marcae Admin é um aplicativo de gestão para profissionais autônomos e empresas de serviços. Organize sua
+                        agenda, clientes, serviços e equipe, acompanhe seus resultados financeiros e centralize sua rotina de
+                        atendimentos em um só lugar.
+                     </p>
                      <div className="hero-actions">
                         <a className="button button-light" href="#download">
                            Baixar o Marcae <Download size={19} />
@@ -208,6 +212,31 @@ function App() {
                            <p>{text}</p>
                         </article>
                      ))}
+                  </div>
+               </div>
+            </section>
+            <section className="section calendar-section" aria-labelledby="google-calendar-title">
+               <div className="container calendar-panel">
+                  <div className="calendar-heading">
+                     <span className="calendar-icon" aria-hidden="true">
+                        <CalendarDays />
+                     </span>
+                     <div>
+                        <span className="kicker">INTEGRAÇÃO COM GOOGLE AGENDA</span>
+                        <h2 id="google-calendar-title">Sua agenda conectada, sem conflitos de horário.</h2>
+                     </div>
+                  </div>
+                  <div className="calendar-copy">
+                     <p>
+                        Conecte sua conta Google ao Marcae Admin para sincronizar seus agendamentos, consultar a disponibilidade de
+                        horários, evitar conflitos e importar eventos existentes do Google Agenda.
+                     </p>
+                     <ul aria-label="Recursos da integração com o Google Agenda">
+                        <li><Check size={17} /> Sincronização de agendamentos</li>
+                        <li><Check size={17} /> Consulta de disponibilidade</li>
+                        <li><Check size={17} /> Importação de eventos existentes</li>
+                        <li><Check size={17} /> Videoconferência pelo Google Meet, quando aplicável</li>
+                     </ul>
                   </div>
                </div>
             </section>

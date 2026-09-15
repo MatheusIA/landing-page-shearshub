@@ -378,6 +378,69 @@ button {
    line-height: 1.65;
    font-size: 0.93rem;
 }
+.calendar-section {
+   padding-top: 0;
+}
+.calendar-panel {
+   display: grid;
+   grid-template-columns: 1fr 0.9fr;
+   gap: 80px;
+   align-items: center;
+   padding: 60px;
+   border: 1px solid var(--line);
+   border-radius: 22px;
+   background: #fff;
+   box-shadow: 0 18px 50px #0118180d;
+}
+.calendar-heading {
+   display: grid;
+   grid-template-columns: 58px 1fr;
+   gap: 22px;
+   align-items: start;
+}
+.calendar-icon {
+   width: 58px;
+   height: 58px;
+   display: grid;
+   place-items: center;
+   border-radius: 14px;
+   background: var(--primary);
+   color: var(--success);
+}
+.calendar-heading .kicker {
+   margin-bottom: 14px;
+}
+.calendar-heading h2 {
+   color: var(--primary);
+   font: 800 clamp(2rem, 4vw, 3rem)/1.08 Manrope;
+   letter-spacing: -0.05em;
+}
+.calendar-copy > p {
+   color: var(--muted);
+   font-size: 1rem;
+   line-height: 1.7;
+}
+.calendar-copy ul {
+   display: grid;
+   gap: 11px;
+   margin-top: 24px;
+   list-style: none;
+}
+.calendar-copy li {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   color: var(--primary);
+   font-size: 0.91rem;
+   font-weight: 600;
+}
+.calendar-copy li svg {
+   flex: 0 0 auto;
+   padding: 3px;
+   border-radius: 50%;
+   background: #e0f2e9;
+   color: #25815c;
+}
 .audience-section {
    background: var(--primary);
    color: #fff;
@@ -632,7 +695,8 @@ button {
    }
    .hero-grid,
    .audience-grid,
-   .download-panel {
+   .download-panel,
+   .calendar-panel {
       grid-template-columns: 1fr;
    }
    .hero-copy {
@@ -662,7 +726,8 @@ button {
       grid-template-columns: repeat(2, 1fr);
    }
    .audience-grid,
-   .download-panel {
+   .download-panel,
+   .calendar-panel {
       gap: 55px;
    }
    .download-panel {
@@ -738,6 +803,17 @@ button {
    }
    .section {
       padding: 85px 0;
+   }
+   .calendar-section {
+      padding-top: 0;
+   }
+   .calendar-panel {
+      padding: 34px 24px;
+      gap: 34px;
+      border-radius: 18px;
+   }
+   .calendar-heading {
+      grid-template-columns: 1fr;
    }
    .feature-grid,
    .showcase-grid {
