@@ -585,8 +585,13 @@ button {
    place-items: center;
    font-weight: 700;
 }
-.platform-icon svg {
+.platform-icon svg,
+.platform-icon-image {
    width: 22px;
+}
+.platform-icon-image {
+   height: 22px;
+   filter: brightness(0) saturate(100%) invert(67%) sepia(25%) saturate(805%) hue-rotate(101deg) brightness(88%) contrast(87%);
 }
 .platform-card small,
 .platform-card strong {

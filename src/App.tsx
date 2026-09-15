@@ -8,13 +8,12 @@ import {
    ChevronRight,
    CircleDollarSign,
    Download,
+   ExternalLink,
    Instagram,
    LayoutDashboard,
    Mail,
    Menu,
-   Monitor,
    PieChart,
-   Smartphone,
    Sparkles,
    Users,
    X,
@@ -27,6 +26,9 @@ import phoneImage from "./assets/phone.png";
 import scheduleImage from "./assets/demonstracao.png";
 import financeImage from "./assets/demonstracao_2.png";
 import PrivacyPolicy from "./PrivacyPolicy";
+import appleIcon from "./assets/icons/apple.svg";
+import googlePlayIcon from "./assets/icons/google-play.svg";
+import windowsIcon from "./assets/icons/windows.svg";
 
 const whatsappUrl = "https://wa.me/5535984295765";
 // const windowsDownloadUrl =
@@ -312,7 +314,7 @@ function App() {
                   <div className="platform-list">
                      <div className="platform-card disabled">
                         <span className="platform-icon">
-                           <Smartphone />
+                           <img className="platform-icon-image" src={googlePlayIcon} alt="Google Play" />
                         </span>
                         <span>
                            <small>EM BREVE NA</small>
@@ -321,16 +323,18 @@ function App() {
                         <span className="soon">Em breve</span>
                      </div>
                      <a className="platform-card available" href="https://apps.apple.com/br/app/marcae-admin/id6796893790" target="_blank">
-                        <span className="platform-icon apple-icon">●</span>
+                        <span className="platform-icon apple-icon">
+                           <img className="platform-icon-image" src={appleIcon} alt="Apple" />
+                        </span>
                         <span>
                            <small>DISPONÍVEL NA</small>
                            <strong>App Store</strong>
                         </span>
-                        <Download className="platform-action" />
+                        <ExternalLink className="platform-action" aria-label="Abrir na App Store" />
                      </a>
                      <a className="platform-card disabled">
                         <span className="platform-icon">
-                           <Monitor />
+                           <img className="platform-icon-image" src={windowsIcon} alt="Windows" />
                         </span>
                         <span>
                            <small>EM BREVE NO</small>
